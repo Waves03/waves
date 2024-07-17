@@ -1,9 +1,44 @@
-document.addEventListener("scroll", function() {
-    var scrolled = window.scrollY;
-    var objeSection = document.querySelector("#obje");
-    var maxScroll = document.body.scrollHeight - window.innerHeight;
-    var scrollFraction = scrolled / maxScroll;
-    var backgroundPositionY = scrollFraction * 100; // Adjust the multiplier as needed
-    objeSection.style.backgroundPosition = "0% " + backgroundPositionY + "%";
+
+$(document).ready(function() {
+  $('#mission-title').click(function() {
+      $('#vision-content').slideUp();
+      $('#mission-content').slideDown();
   });
-  
+
+  $('#vision-title').click(function() {
+      $('#mission-content').slideUp();
+      $('#vision-content').slideDown();
+  });
+});
+
+
+function scrollToActivity() {
+  const activity = document.querySelectorAll("#title")[index];
+  if (activity) {
+    activity.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// SOOOOOOOOO NICE 
+
+
+
+
+
